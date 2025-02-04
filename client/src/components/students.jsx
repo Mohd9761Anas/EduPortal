@@ -10,7 +10,8 @@ const Students = () => {
 
   const fetchStudentDetails = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/students/${studentId}`);
+      const response = await axios.get(`https://eduportal-rjw1.onrender.com/students/${studentId}`);
+      // const response = await axios.get(`http://localhost:5000/students/${studentId}`);
       setStudentDetails(response.data);
       setError("");
     } catch (err) {
