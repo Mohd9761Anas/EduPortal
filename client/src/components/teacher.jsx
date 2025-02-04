@@ -13,7 +13,7 @@ const Teachers = () => {
 
   const fetchTeacherDetails = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/teachers/${teacherId}`);
+      const response = await axios.get(`https://eduportal-rjw1.onrender.com/teachers/${teacherId}`);
       setTeacherDetails(response.data);
       setError("");
     } catch (err) {
@@ -24,7 +24,7 @@ const Teachers = () => {
 
   const assignSubject = async () => {
     try {
-      const response = await axios.post("http://localhost:5000/assign-subject", {
+      const response = await axios.post("https://eduportal-rjw1.onrender.com/assign-subject", {
         teacher_id: teacherId,
         student_id: studentId,
         subject_code: subjectCode
